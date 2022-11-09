@@ -16,19 +16,16 @@
   text-align: right;
 }
 
-.pic {
+.go_test {
   text-align: center;
-}
-.pic > img {
-  width: 50%;
-}
-
-.test {
-  text-align: center;
-}
-
-.field {
+  padding: 2%;
   width: 20%;
-  margin: 0 auto;
+  border: 1px solid black;;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
