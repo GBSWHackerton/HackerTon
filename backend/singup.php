@@ -11,7 +11,7 @@
         <input type="text" name="makeid" placeholder="생성할 id를 입력">
         <input type="text" name="makeemail" placeholder="email을 입력">
         <input type="text" name="makepassword" placeholder="생성할 비밀번호를 입력">
-        <button id = "maker"></button>
+        <button id = "maker">전송</button>
         <script>
             const MakeButton = document.querySelector("#maker");
             function pushAll(){

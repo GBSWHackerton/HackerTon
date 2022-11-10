@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.header {
+  padding: 2%;
+  margin-right: 5%;
+}
+.header > pre > a {
+  color: #000;
+  text-decoration: none;
+}
+.header > pre {
+  text-align: right;
+}
+
+.go_test {
+  text-align: center;
+  padding: 2%;
+  width: 20%;
+  border: 1px solid black;;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
