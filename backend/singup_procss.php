@@ -11,44 +11,44 @@
 </body>
 </html>
 <?php
-    session_start();
-    // $conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
-    $conn=mysqli_connect("localhost","root","sunlove8421!","hack");
-    $hashedPassword = password_hash($_POST['makepassword'], PASSWORD_DEFAULT);
-    echo $hashedPassword;
+    //$conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
+    $conn=mysqli_connect("localhost","root","sunlove8421!","hack");//test용
+    $id = $_POST['makeid'];
+    $email = $_POST['makeemail'];
+    $password = $_POST['makepassword'];
+    if(empty($_POST['makeid'])) {
     ?>
-    <script>
-      function pushAll(){
-        let userNewId = <? $_POST['makeid']?>;
-        let userNewEmail = <? $_POST['makeemail']?>;
-        let userNewPw = <? $_POST['makepassword']?>;
-        if(!userNewId){
-          alert("ID 를 입력해주세요.");
-          document.getElementsByName("makeid").focus();
-          return false;
-        }
-        else if(!userNewEmail){
-          alert("email을 입력해주세요.");
-          document.getElementsByName("makeemail").focus();
-          return false;
-        }
-        else if(!userNewPw){
-          alert("비밀번호를 입력해주세요.");
-          document.getElementsByName("makepassword").focus();
-          return false;
-        }
-        else{
-          let userId = userNewId;
-        }
-      }
-        </script>
+      <script>
+      location.href = "singup.php";
+    </script>
     <?php
+      exit;
+  }
+  if(empty($_POST['makepassword'])) {
+    ?>
+      <script>
+      location.href = "singup.php";
+    </script>
+    <?php
+      exit;
+  }
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    echo $hashedPassword;
     $sql = "
     INSERT INTO user
     (email, password, id)
-    VALUES('{$_POST['makeemail']}', '{$hashedPassword}', '{$_POST['makeid']}'
+    VALUES('{$email}', '{$hashedPassword}', '{$id}'
     )";
     $result = mysqli_query($conn, $sql);
+    $row = mysql_num_rows($result);
+    if($row>0){
+      ?>
+      <script>
+        alert("이미 존재하는 아이디입니다. 다시 입력해주세요.");
+      </script>
+      <?php
+      exit;
+    }
     if ($result === false) {
         echo "저장에 문제가 생겼습니다. 관리자에게 문의해주세요.";
         echo mysqli_error($conn);
@@ -56,7 +56,7 @@
     ?>
         <script>
             alert("회원가입이 완료되었습니다");
-            location.href = "/front/index.php"
+            location.href="/front/index.php"
         </script>
     <?php
     }
