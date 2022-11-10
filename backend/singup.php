@@ -16,10 +16,15 @@
             const MakeButton = document.querySelector("#maker");
             function pushAll(){
                 const userNewId = document.getElementsByName("makeid")[0].value;
+                const userNewEmail = document.getElementsByName("makeemail")[0].value;
+                const userNewPw = document.getElementsByname("makepassword")[o].value;
                 
-                const userId = userNewId; //id 저장
-                console.log(userId);
-
+                if((userNewId == null)||(userNewEmail==null)||(userNewPw=null)){
+                  aleat("입력되지 않았습니다. 다시 입력해주세요.");
+                  window.loction.reload();
+                }else{
+                  const userId = userNewId; //id 저장
+                }
             }
             MakeButton.addEventListener('click',pushAll);
         </script>

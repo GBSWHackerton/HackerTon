@@ -16,7 +16,33 @@
     $conn=mysqli_connect("localhost","root","sunlove8421!","hack");
     $hashedPassword = password_hash($_POST['makepassword'], PASSWORD_DEFAULT);
     echo $hashedPassword;
-   
+    ?>
+    <script>
+      function pushAll(){
+        let userNewId = <? $_POST['makeid']?>;
+        let userNewEmail = <? $_POST['makeemail']?>;
+        let userNewPw = <? $_POST['makepassword']?>;
+        if(!userNewId){
+          alert("ID 를 입력해주세요.");
+          document.getElementsByName("makeid").focus();
+          return false;
+        }
+        else if(!userNewEmail){
+          alert("email을 입력해주세요.");
+          document.getElementsByName("makeemail").focus();
+          return false;
+        }
+        else if(!userNewPw){
+          alert("비밀번호를 입력해주세요.");
+          document.getElementsByName("makepassword").focus();
+          return false;
+        }
+        else{
+          let userId = userNewId;
+        }
+      }
+        </script>
+    <?php
     $sql = "
     INSERT INTO user
     (email, password, id)

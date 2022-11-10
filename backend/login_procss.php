@@ -16,6 +16,20 @@
     $conn=mysqli_connect('localhost','root','sunlove8421!','hack');
     $id = $_POST['id'];
     $password = $_POST['password'];
+    function SQLFiltering($id){
+        // 해킹 공격을 대비하기 위한 코드
+        $id=preg_replace("/\s{1,}1\=(.*)+/","",$id); // 공백이후 1=1이 있을 경우 제거
+        $id=preg_replace("/\s{1,}(or|and|null|where|limit|alert|location)/i"," ",$id); // 공백이후 or, and 등이 있을 경우 제거
+        $id = preg_replace("/[\s\t\'\;\=]+/","", $id); // 공백이나 탭 제거, 특수문자 제거
+        return $id;
+    }
+    function SQLFilteringp($password){
+        // 해킹 공격을 대비하기 위한 코드
+        $password=preg_replace("/\s{1,}1\=(.*)+/","",$password); // 공백이후 1=1이 있을 경우 제거
+        $password=preg_replace("/\s{1,}(or|and|null|where|limit|alert|location)/i"," ",$password); // 공백이후 or, and 등이 있을 경우 제거
+        $password = preg_replace("/[\s\t\'\;\=]+/","", $password); // 공백이나 탭 제거, 특수문자 제거
+        return $password;
+    }
     $sql = "SELECT * FROM user WHERE id ='{$id}'";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);
@@ -28,7 +42,7 @@
         ?>
         <script>
             alert("로그인에 성공");
-            location.href = "/front/index.php";
+            
         </script>
         <?php
     }else{
