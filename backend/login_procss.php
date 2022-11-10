@@ -27,14 +27,14 @@
         ?>
         <script>
             alert("로그인에 성공");
-            location.href = "/front/index.html";
+            location.href = "/front/index.php";
         </script>
         <?php
     }else{
         ?>
         <script>
         alert("로그인에 실패하였습니다");
-        location.href = "/front/index.html";
+        location.href = "/front/index.php";
         </script>
         <?php
     }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="test.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <title>Test</title>
+</head>
+<body>
+  <form>
+    <div class="test">
+      <h2>환자분의 상태를 알려주세요!</h2><br>
+
+          <fieldset class="field">
+            <legend>기침증세가 있나요?</legend>
+              <input type="radio" name="cough" value="Yes"><label>네</label>&nbsp&nbsp
+              <input type="radio" name="cough" value="No"><label>아니요</label>
+          </fieldset>
+          <br>
+
+        <fieldset class="field">
+          <legend>가래가 끼는증세가 있나요?</legend>
+            <input type="radio" name="garae" value="Yes"><label>네</label>&nbsp&nbsp
+            <input type="radio" name="garae" value="No"><label>아니요</label>
+        </fieldset>
+        <br>
+
+        <fieldset class="field">
+          <legend>열이 나나요?</legend>
+            <input type="radio" name="Heat" value="Yes"><label>네</label>&nbsp&nbsp
+            <input type="radio" name="Heat" value="Yes"><label>미열</label>&nbsp&nbsp
+            <input type="radio" name="Heat" value="No"><label>아니요</label>
+        </fieldset>
+        <br>
+
+        <fieldset class="field">
+          <legend>두통이 있나요?</legend>
+            <input type="radio" name="Head" value="Yes"><label>네</label>&nbsp&nbsp
+            <input type="radio" name="Head" value="Yes"><label>조금</label>&nbsp&nbsp
+            <input type="radio" name="Head" value="No"><label>아니요</label>
+        </fieldset>
+        <br>
+      
+      <input type="submit" value="전송하기">&nbsp&nbsp
+      <input type="reset" value="다시하기">
+      <br><br>
+    </div>
+  </form>
+</body>
+</html>

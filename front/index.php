@@ -11,14 +11,33 @@
   <title>Hackerton</title>
 </head>
 <body>
+  <?php
+    session_start();
+    if (isset($_SESSION['userid'])){
+      
 
-  <header>
+      ?>
+        <header>
+    <div class="header">
+      <pre>
+        <a href="/backend/info.php">내 정보 보기</a>  <a href="/backend/logoutprocss.php">로그아웃</a>
+      </pre>
+    </div>
+  </header>
+  <?php
+    }else{
+      ?>
+        <header>
     <div class="header">
       <pre>
         <a href="/backend/login.php">로그인</a>  <a href="/backend/singup.php">회원가입</a>
       </pre>
     </div>
   </header>
+  <?php
+    }
+  ?>
+  <div class="chu"><img src="gochu.jpg" class="medic"></div>
 
 
   <br><br>
