@@ -20,7 +20,7 @@
       <pre>
         <a href="/backend/info.php">내 정보 보기</a>  <a href="/backend/logoutprocss.php">로그아웃</a>
         <script>
-          let log_ok = 1;
+          var log_ok = 1;
         </script>
       </pre>
     </div>
@@ -33,7 +33,7 @@
       <pre>
         <a href="/backend/login.php">로그인</a>  <a href="/backend/singup.php">회원가입</a>
         <script>
-          log_ok = 0;
+          var log_ok = 0;
         </script>
       </pre>
     </div>
@@ -42,11 +42,18 @@
     }
   ?>
   <div class="chu"><img src="gochu.jpg" class="medic"></div>
-
-
-
+  <script>
+    const gotest = function(){
+      if(log_ok == 1){
+        location.href="../front/test.html";
+      }
+      else{
+        location.href="../backend/login.php";
+      }
+    }
+  </script>
   <br><br>
-      <a href="test.html">
+      <a href="#nono"onclick="gotest();">
         <div class="go_test">
             검사하러 갈거면 누르세요
         </div>
