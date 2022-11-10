@@ -39,6 +39,8 @@
   ?>
   <div class="chu"><img src="gochu.jpg" class="medic"></div>
 
+  <div class="chu"><img src="gochu.jpg" class="medic"></div>
+
 
   <br><br>
 
