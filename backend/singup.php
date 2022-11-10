@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,10 +14,14 @@
         <button id = "maker"></button>
         <script>
             const MakeButton = document.querySelector("#maker");
-            function userId(){
+            function pushAll(){
+                const userNewId = document.getElementsByName("makeid")[0].value;
                 
+                const userId = userNewId; //id 저장
+                console.log(userId);
+
             }
-            userID.addEventListener('click',userId);
+            MakeButton.addEventListener('click',pushAll);
         </script>
     </form>
 </body>
