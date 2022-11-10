@@ -1,5 +1,4 @@
 * {
-<<<<<<< HEAD
     margin: 0;
     padding: 0;
     font-family: 'Nanum Gothic', sans-serif;
@@ -15,20 +14,3 @@
   .test {
     text-align: center;
   }
-=======
-  margin: 0;
-  padding: 0;
-  font-family: 'Nanum Gothic', sans-serif;
-}
-
-.field {
-  width: 20%;
-  margin: 0 auto;
-  padding: 7px;
-}
-
-
-.test {
-  text-align: center;
-}
->>>>>>> 7500aee7ce455340795c7166d88f7574255093c6

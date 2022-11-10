@@ -14,13 +14,14 @@
   <?php
     session_start();
     if (isset($_SESSION['userid'])){
-      
-
       ?>
         <header>
     <div class="header">
       <pre>
         <a href="/backend/info.php">내 정보 보기</a>  <a href="/backend/logoutprocss.php">로그아웃</a>
+        <script>
+          let log_ok = 1;
+        </script>
       </pre>
     </div>
   </header>
@@ -31,6 +32,9 @@
     <div class="header">
       <pre>
         <a href="/backend/login.php">로그인</a>  <a href="/backend/singup.php">회원가입</a>
+        <script>
+          log_ok = 0;
+        </script>
       </pre>
     </div>
   </header>
@@ -39,17 +43,14 @@
   ?>
   <div class="chu"><img src="gochu.jpg" class="medic"></div>
 
-  <div class="chu"><img src="gochu.jpg" class="medic"></div>
 
 
   <br><br>
-
       <a href="test.html">
         <div class="go_test">
             검사하러 갈거면 누르세요
         </div>
       </a>
       <br>
-      
 </body>
 </html>

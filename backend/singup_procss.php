@@ -9,9 +9,11 @@
 <body>
     
 </body>
-</html><?php
+</html>
+<?php
     session_start();
-    $conn=mysqli_connect('localhost','root','sunlove8421!','hack');
+    //$conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
+    $conn=mysqli_connect("localhost","root","sunlove8421!","hack");
     $hashedPassword = password_hash($_POST['makepassword'], PASSWORD_DEFAULT);
     echo $hashedPassword;
    
@@ -28,7 +30,7 @@
     ?>
         <script>
             alert("회원가입이 완료되었습니다");
-            location.href = "/front/index.php";
+            location.href = "/front/index.php"
         </script>
     <?php
     }

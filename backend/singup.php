@@ -7,7 +7,7 @@
     <title>회원가입</title>
 </head>
 <body>
-    <form action="singup_procss.php" method="post">
+    <form action="/backend/singup_procss.php" method="post">
         <input type="text" name="makeid" placeholder="생성할 id를 입력">
         <input type="text" name="makeemail" placeholder="email을 입력">
         <input type="text" name="makepassword" placeholder="생성할 비밀번호를 입력">

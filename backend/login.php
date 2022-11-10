@@ -9,7 +9,7 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="login_procss.php" method="post">
+    <form action="/backend/login_procss.php" method="post">
         <input type="text" name="id" placeholder="id를 입력하세요">
         <input type="password" name="password" placeholder="비밀번호를 입력해주세요">
         
