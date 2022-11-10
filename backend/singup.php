@@ -12,17 +12,6 @@
         <input type="text" name="makeemail" placeholder="email을 입력">
         <input type="text" name="makepassword" placeholder="생성할 비밀번호를 입력">
         <button id = "maker">전송</button>
-        <script>
-            const MakeButton = document.querySelector("#maker");
-            function pushAll(){
-                const userNewId = document.getElementsByName("makeid")[0].value;
-                
-                const userId = userNewId; //id 저장
-                console.log(userId);
-
-            }
-            MakeButton.addEventListener('click',pushAll);
-        </script>
     </form>
 </body>
 </html>
