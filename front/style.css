@@ -4,12 +4,17 @@
   font-family: 'Nanum Gothic', sans-serif;
 }
 
+body {
+  background-image: url('background.webp');
+  background-size: cover;
+}
+
 .header {
   padding: 2%;
   margin-right: 5%;
 }
 .header > pre > a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 .header > pre {
@@ -19,8 +24,9 @@
 .go_test {
   text-align: center;
   padding: 2%;
-  width: 20%;
-  border: 1px solid black;;
+  width: 19.21%;
+  border: 1px solid rgba(226, 226, 226, 0.5);
+  border-radius: 5px;
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -28,6 +34,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(226, 226, 226, 0.5);
+}
+.go_test:hover {
+  cursor: pointer;
+  background-color: hotpink;
+  color: #fff;
+  box-shadow: 10px 5px 5px pink;
+  transition: all .3s;
+  border: 1px solid #fff;
 }
 
 .medic {
