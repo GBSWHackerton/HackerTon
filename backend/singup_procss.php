@@ -16,22 +16,7 @@
     $id = $_POST['makeid'];
     $email = $_POST['makeemail'];
     $password = $_POST['makepassword'];
-    if(empty($_POST['makeid'])) {
-    ?>
-      <script>
-      location.href = "singup.php";
-    </script>
-    <?php
-      exit;
-  }
-  if(empty($_POST['makepassword'])) {
-    ?>
-      <script>
-      location.href = "singup.php";
-    </script>
-    <?php
-      exit;
-  }
+   
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     echo $hashedPassword;
     $sql = "
@@ -39,8 +24,9 @@
     (email, password, id)
     VALUES('{$email}', '{$hashedPassword}', '{$id}'
     )";
-    $result = mysqli_query($conn, $sql);
-    $row = mysql_num_rows($result);
+    $sql1 =  "SELECT id FROM user WHERE id='".$_POST['makeid']."'";
+    $result = mysqli_query($conn, $sql1);
+    $row = mysqli_num_rows($result);
     if($row>0){
       ?>
       <script>
