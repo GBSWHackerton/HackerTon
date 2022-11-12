@@ -16,6 +16,8 @@
     //$conn=mysqli_connect('localhost','root','sunlove8421!','hack');
     $id = $_POST['id'];
     $password = $_POST['password'];
+    SQLFiltering($id);
+    SQLFilteringp($password);
     function SQLFiltering($id){
         // 해킹 공격을 대비하기 위한 코드
         $id=preg_replace("/\s{1,}1\=(.*)+/","",$id); // 공백이후 1=1이 있을 경우 제거
