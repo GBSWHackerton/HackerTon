@@ -1,0 +1,77 @@
+body {
+    background-color: gainsboro;
+}
+
+.Form {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    padding: 30px, 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    box-shadow: 2px 1px 3px black;
+}
+
+.ID {
+    height: 35px;
+    width: 300px;
+    outline: none;
+    color: #636e72;
+    font-size: 16px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    padding: 3px;
+    margin-top: 20px;
+}
+
+.Mail {
+    height: 35px;
+    width: 300px;
+    outline: none;
+    color: #636e72;
+    font-size: 16px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    padding: 3px;
+    margin-top: 20px;
+}
+
+.PWD {
+    height: 35px;
+    width: 300px;
+    outline: none;
+    color: #636e72;
+    font-size: 16px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    padding: 3px;
+    margin-top: 20px;
+}
+
+.maker:hover {
+    width: 203px;
+    height: 43px;
+}
+
+.maker {
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px black;
+    margin-top: 50px;
+}
