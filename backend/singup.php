@@ -2,15 +2,22 @@
 <html lang="ko">
 
 <head>
-    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/front/singup.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="icon" href="../front/favicon/favicon.ico" type="favicon/x-icon">
     <title>회원가입</title>
 </head>
 
 <body>
+    <a href="#" class="back">
+            돌아가기
+    </a>
+
     <form action="singup_procss.php" method="POST" class="Form">
         <div class="loginwrap">
             <h1>회원가입</h1>
@@ -36,20 +43,19 @@
                 let userNewPw = document.querySelector("#PW");
                 
                 if(userNewId.value==""){
-
-                  alert("ID 를 입력해주세요.");
-                  document.getElementsByName("makeid").focus();
-                 
+                    alert("ID 를 입력해주세요.");
+                    document.getElementsByName("makeid").focus();
+                    
                 }
                 if(userNewEmail.value==""){
-                  alert("email을 입력해주세요.");
-                  document.getElementsByName("makeemail").focus();
-                  
+                    alert("email을 입력해주세요.");
+                    document.getElementsByName("makeemail").focus();
+                
                 }
                 if(userNewPw.value == ""){
-                  alert("비밀번호를 입력해주세요.");
-                  document.getElementsByName("makepassword").focus();
-                  
+                    alert("비밀번호를 입력해주세요.");
+                    document.getElementsByName("makepassword").focus();
+                
                 }
             }
         </script>
