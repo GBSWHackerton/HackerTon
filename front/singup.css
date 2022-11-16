@@ -1,3 +1,7 @@
+* {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
 body {
     background-color: gainsboro;
 }
@@ -74,4 +78,12 @@ body {
     border-radius: 8px;
     box-shadow: 1px 1px 3px black;
     margin-top: 50px;
+}
+
+.back{
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    padding: 2%;
+    margin-top: -10px;
 }
