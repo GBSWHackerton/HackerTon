@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <a href="#" class="back">
+    <a href="../front/index.php" class="back">
             돌아가기
     </a>
 
