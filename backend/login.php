@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <link rel="icon" href="../front/favicon/favicon.ico" type="favicon/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&amp;display=swap" rel="stylesheet">
+    <link href="../front/css.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-   
     <title>Login</title>
 </head>
+
 <body>
-    <form action="/backend/login_procss.php" method="post">
-        <input type="text" name="id" placeholder="id를 입력하세요">
-        <input type="password" name="password" placeholder="비밀번호를 입력해주세요">
-        
-        <button>전송</button>
+    <header>
+        <div class="Main">
+            <div class="MainBtn">
+                <a href="index.php" class="Btn">돌아가기</a>
+            </div>
+        </div>
+    </header>
+
+    <form action="/backend/login_procss.php" method="post" class="Form">
+        <h1>로그인</h1>
+        <div class="wrap">
+            <div class="Input">
+                <input type="text" class="ID" name="id" placeholder="아이디">
+            </div>
+            <div class="PWD">
+                <input type="password" class="Pwd" name="password" placeholder="비밀번호">
+            </div>
+        </div>
+
+        <div class="BUTTON">
+            <button class="Button">전송</button>
+        </div>
     </form>
+
 </body>
 </html>
