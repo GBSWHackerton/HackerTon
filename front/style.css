@@ -6,8 +6,12 @@
 
 body {
   background-image: url('background.webp');
+  height: 100vh;
+  background-repeat: no-repeat;
   background-size: cover;
 }
+
+
 
 .header {
   padding: 2%;
@@ -38,11 +42,10 @@ body {
 }
 .go_test:hover {
   cursor: pointer;
-  background-color: hotpink;
-  color: #fff;
-  box-shadow: 10px 5px 5px pink;
+  background-color: rgba(226, 226, 226, 0);
+  color: #000;
   transition: all .3s;
-  border: 1px solid #fff;
+  border: 1px solid #fff;   
 }
 
 .medic {
@@ -50,4 +53,17 @@ body {
 }
 .chu {
   text-align: center;
+}
+
+@media screen and (max-width:767px) {
+  .header > pre > a {
+    color: #000;
+  }
+
+  .go_test {
+    width: 200px;
+    line-height: 50px;
+    align-items: center;
+    font-size: 17px;
+  }
 }
