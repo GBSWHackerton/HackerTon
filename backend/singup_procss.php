@@ -11,12 +11,40 @@
 </body>
 </html>
 <?php
-    //$conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
+    // /$conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
     $conn=mysqli_connect("localhost","root","sunlove8421!","hack");//test용
     $id = $_POST['makeid'];
     $email = $_POST['makeemail'];
     $password = $_POST['makepassword'];
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    SQLFiltering($id);
+    SQLFilteringp($password);
+    function SQLFiltering($id){
+        // 해킹 공격을 대비하기 위한 코드
+        $id=preg_replace("/\s{1,}1\=(.*)+/","",$id); // 공백이후 1=1이 있을 경우 제거
+        $id=preg_replace("/\s{1,}(or|and|null|where|limit|alert|location)/i"," ",$id); // 공백이후 or, and 등이 있을 경우 제거
+        $id = preg_replace("/[\s\t\'\;\=]+/","", $id); // 공백이나 탭 제거, 특수문자 제거
+        ?>
+        <script>
+          alert("어허 그러면 안돼~");
+          location.href="singup.php";
+        </script>
+        <?php
+        exit;
+    }
+    function SQLFilteringp($password){
+        // 해킹 공격을 대비하기 위한 코드
+        $password=preg_replace("/\s{1,}1\=(.*)+/","",$password); // 공백이후 1=1이 있을 경우 제거
+        $password=preg_replace("/\s{1,}(or|and|null|where|limit|alert|location)/i"," ",$password); // 공백이후 or, and 등이 있을 경우 제거
+        $password = preg_replace("/[\s\t\'\;\=]+/","", $password); // 공백이나 탭 제거, 특수문자 제거
+        ?>
+        <script>
+          alert("어허 그러면 안돼~");
+          location.href="singup.php";
+        </script>
+        <?php
+        exit;
+    }
     if(empty($id)){
         ?>
         <script>location.href="singup.php"</script>
@@ -45,7 +73,7 @@
       ?>
       <script>
         alert("이미 존재하는 아이디입니다. 다시 입력해주세요.");
-        <script>location.href="singup.php"</script>
+        location.href="singup.php";
       </script>
       <?php
       exit;
@@ -54,7 +82,7 @@
         ?>
         <script>
           alert("이미 존재하는 이메일입니다. 다시 입력해주세요.");
-          <script>location.href="singup.php"</script>
+          location.href="singup.php";
         </script>
         <?php
         exit;
