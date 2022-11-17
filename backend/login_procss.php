@@ -12,8 +12,8 @@
 </html>
 <?php
     session_start();
-    //$conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
-    $conn=mysqli_connect('localhost','root','sunlove8421!','hack');
+    $conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
+    //$conn=mysqli_connect('localhost','root','sunlove8421!','hack');
     $id = $_POST['id'];
     $password = $_POST['password'];
     SQLFiltering($id);

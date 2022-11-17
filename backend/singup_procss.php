@@ -11,8 +11,8 @@
 </body>
 </html>
 <?php
-    // /$conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
-    $conn=mysqli_connect("localhost","root","sunlove8421!","hack");//test용
+    $conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
+    //$conn=mysqli_connect("localhost","root","sunlove8421!","hack");//test용
     $id = $_POST['makeid'];
     $email = $_POST['makeemail'];
     $password = $_POST['makepassword'];
