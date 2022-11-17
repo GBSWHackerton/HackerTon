@@ -16,7 +16,7 @@
     <header>
         <div class="Main">
             <div class="MainBtn">
-                <a href="index.php" class="Btn">돌아가기</a>
+                <a href="../front/index.php" class="Btn">돌아가기</a>
             </div>
         </div>
     </header>

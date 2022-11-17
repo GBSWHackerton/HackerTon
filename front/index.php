@@ -13,7 +13,6 @@
   <title>Hackerton</title>
 </head>
 <body>
-  <!-- <div class="bg"><img src="background.jpg"></div> -->
   <?php
     session_start();
     if (isset($_SESSION['userid'])){
@@ -31,16 +30,16 @@
       ?>
         <header>
     <div class="header">
-      <pre>
-        <a href="/backend/login.php">로그인</a>  <a href="/backend/singup.php">회원가입</a>
-      </pre>
+
+      <ul>
+        <a href="../backend/login.php"><li>로그인</li></a>
+        <a href="../backend/singup.php"><li>회원가입</li></a>
+      </ul>
     </div>
   </header>
   <?php
     }
   ?>
-  <!-- <div class="chu"><img src="gotest.png" class="medic"></div> -->
-
 
   <br><br>
 
