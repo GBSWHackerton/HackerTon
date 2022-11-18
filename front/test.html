@@ -10,10 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon/favicon.ico" type="favicon/x-icon">
   <title>Test</title>
-  <script src="test.js"></script>
+  <script src="./test.js"></script>
 </head>
 <body>
-  <form>
+  <form class="fromValue">
     <div class="test">
       <h1>자가진단</h1><br>
 
@@ -86,9 +86,12 @@
             <label><input type="radio" name="Sore" value="No">아니요</label>
         </fieldset>
         <br>
-
-          <input type="submit" onclick="forwardingValue();" value="전송하기">
-          <input type="reset" value="다시하기">
+      <input type="hidden" name="Pneumonia" value="0">
+      <input type="hidden" name="Covid" value="0">
+      <input type="hidden" name="cold" value="0">
+      <input type="hidden" name="flu" value="0">
+      <input type="button" onclick="forwardingValue();" value="전송하기">
+      <input type="reset" value="다시하기">
       <br><br>
     </div>
   </form>
