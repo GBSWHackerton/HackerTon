@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 7px;
+}
+
+td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 7px;
+}
+
