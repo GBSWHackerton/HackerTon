@@ -12,8 +12,8 @@
 </html>
 <?php
     session_start();
-    $conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
-    //$conn=mysqli_connect('localhost','root','sunlove8421!','hack');
+    //$conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
+    $conn=mysqli_connect('localhost','root','sunlove8421!','hack');
     $id = $_POST['id'];
     $password = $_POST['password'];
     SQLFiltering($id);
@@ -23,26 +23,12 @@
         $id=preg_replace("/\s{1,}1\=(.*)+/","",$id); // 공백이후 1=1이 있을 경우 제거
         $id=preg_replace("/\s{1,}(or|and|null|where|limit|alert|location)/i"," ",$id); // 공백이후 or, and 등이 있을 경우 제거
         $id = preg_replace("/[\s\t\'\;\=]+/","", $id); // 공백이나 탭 제거, 특수문자 제거
-        ?>
-        <script>
-          alert("어허 그러면 안돼~");
-          location.href="singup.php";
-        </script>
-        <?php
-        exit;
     }
     function SQLFilteringp($password){
         // 해킹 공격을 대비하기 위한 코드
         $password=preg_replace("/\s{1,}1\=(.*)+/","",$password); // 공백이후 1=1이 있을 경우 제거
         $password=preg_replace("/\s{1,}(or|and|null|where|limit|alert|location)/i"," ",$password); // 공백이후 or, and 등이 있을 경우 제거
         $password = preg_replace("/[\s\t\'\;\=]+/","", $password); // 공백이나 탭 제거, 특수문자 제거
-        ?>
-        <script>
-          alert("어허 그러면 안돼~");
-          location.href="singup.php";
-        </script>
-        <?php
-        exit;
     }
     $sql = "SELECT * FROM user WHERE id ='{$id}'";
     $result = mysqli_query($conn, $sql);

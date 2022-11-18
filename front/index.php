@@ -43,13 +43,29 @@
   ?>
 
   <br><br>
-
-      <a href="test.html">
+  <?php
+  if (isset($_SESSION['userid'])){
+      
+      ?>
+         <a href="test.html">
         <div class="go_test">
             나의 건강상태 체크하기
         </div>
       </a>
       <br>
+  <?php
+    }else{
+      ?>
+        <a href="#" onclick="alert('로그인후 이용해주세요');">
+        <div class="go_test">
+            로그인 후 이용해주세요
+        </div>
+      </a>
+      <br>
+  <?php
+    }
+  ?>
+ 
       
 </body>
 </html>
