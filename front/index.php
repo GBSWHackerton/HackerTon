@@ -19,10 +19,11 @@
       
       ?>
         <header>
-    <div class="header">
-      <pre>
-        <a href="/backend/info.php">내 정보 보기</a>  <a href="/backend/logoutprocss.php">로그아웃</a>
-      </pre>
+      <div class="header">
+      <ul>
+        <li><a href="/backend/info.php">내 정보 보기</a></li> 
+        <li><a href="/backend/logoutprocss.php">로그아웃</a></li>
+      </ul>
     </div>
   </header>
   <?php
@@ -32,8 +33,8 @@
     <div class="header">
 
       <ul>
-        <a href="../backend/login.php"><li>로그인</li></a>
-        <a href="../backend/singup.php"><li>회원가입</li></a>
+        <li><a href="../backend/login.php">로그인</a></li>
+        <li><a href="../backend/singup.php">회원가입</a></li>
       </ul>
     </div>
   </header>

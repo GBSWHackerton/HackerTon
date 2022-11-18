@@ -16,11 +16,7 @@
     <header>
         <div class="Main">
             <div class="MainBtn">
-<<<<<<< HEAD
                 <a href="/front/index.php" class="Btn">돌아가기</a>
-=======
-                <a href="../front/index.php" class="Btn">돌아가기</a>
->>>>>>> 469f98f692446ef25bf61bf4a8341d70e458254d
             </div>
         </div>
     </header>
