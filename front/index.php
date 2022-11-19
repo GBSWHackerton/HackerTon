@@ -21,7 +21,7 @@
         <header>
       <div class="header">
       <ul>
-        <li><a href="/backend/info.php">내 정보 보기</a></li> 
+        <li><a href="info.php">내 정보 보기</a></li> 
         <li><a href="/backend/logoutprocss.php">로그아웃</a></li>
       </ul>
     </div>
