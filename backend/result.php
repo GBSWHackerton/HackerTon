@@ -1,7 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 <?php
     session_start();
-    //$conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
-    $conn=mysqli_connect('localhost','root','sunlove8421!','hack');
+    $conn=mysqli_connect("localhost","yusun2234sun1","sunlove8421!","yusun2234sun1");
+    //$conn=mysqli_connect('localhost','root','sunlove8421!','hack');
     $covid = $_POST['Covid'];
     $pneumonia = $_POST['Pneumonia'];
     $cold = $_POST['cold'];
